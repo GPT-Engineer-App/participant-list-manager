@@ -34,14 +34,19 @@ const Index = () => {
           </FormControl>
         </Box>
         <List spacing={3} w="full" borderWidth="1px" borderRadius="lg" p={4}>
-          {participants.map((participant, index) => {
-            return (
-              <ListItem key={index}>
-                <ListIcon as={FaUser} color="green.500" />
-                {`${participant.name} - ${participant.belt} - ${participant.city} - ${participant.instructor}`}
-              </ListItem>
-            );
-          })}
+          {participants
+            .sort((a, b) => {
+              const beltOrder = ["Black", "Brown", "Blue", "Green", "Yellow", "White"];
+              return beltOrder.indexOf(a.belt) - beltOrder.indexOf(b.belt);
+            })
+            .map((participant, index) => {
+              return (
+                <ListItem key={index}>
+                  <ListIcon as={FaUser} color="green.500" />
+                  {`${participant.name} - ${participant.belt} - ${participant.city} - ${participant.instructor}`}
+                </ListItem>
+              );
+            })}
         </List>
       </VStack>
     </Container>
