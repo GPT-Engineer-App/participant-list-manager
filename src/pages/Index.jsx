@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, VStack, Input, Button, List, ListItem, ListIcon, Heading, FormControl, FormLabel, Box } from "@chakra-ui/react";
 import { FaUserPlus, FaUser } from "react-icons/fa";
+import Subtitles from '../components/Subtitles';
 
 const Index = () => {
   const [participants, setParticipants] = useState([]);
@@ -14,7 +15,9 @@ const Index = () => {
   };
 
   return (
+
     <Container centerContent maxW="container.md" py={8}>
+      <Subtitles />
       <VStack spacing={8} w="full">
         <Heading as="h1" size="xl">
           Participant List
