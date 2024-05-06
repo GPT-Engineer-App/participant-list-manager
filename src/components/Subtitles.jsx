@@ -2,7 +2,7 @@ import React from "react";
 import { HStack, Button } from "@chakra-ui/react";
 
 const Subtitles = () => {
-  const subtitles = ["Subtitle 1", "Subtitle 2", "Subtitle 3", "Subtitle 4", "Subtitle 5", "Subtitle 6"];
+  const subtitles = ["Karatekas", "Subtitle 2", "Subtitle 3", "Subtitle 4", "Subtitle 5", "Subtitle 6"];
 
   return (
     <HStack spacing={4} my={4}>
